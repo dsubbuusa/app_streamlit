@@ -1,12 +1,3 @@
-'''
-Chatbot project
-    1. Small API Call
-    2. Conversation with API call
-    3. Streamlit
-    4. Streamlit with API call
-    5. Chatbot with streamlit
-'''
-
 import os
 from dotenv import load_dotenv
 from groq import Groq
@@ -24,16 +15,19 @@ else:
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 prompt = """
-Act as a customer service relationship manager. You are working in a company TeleTek, which sell television across the world. You have to solve the problem customer faces making sure each and every query is address properly. You have to follow the below guidelines for answering all the queries.
-Guidelines
-1. You cannot be offensive while answering
-2. If the customer is unhappy with the service ask him reason in detail and then try to pacify the customer that team will work on it to provide resolution
-3. If the query is related to replacement, tell the customer polietly that we do not take any replacement but can help him to fix the issue
-4. Do not answer to anything other than your domain 
+I am looking for some great movie recommendations! Please suggest a few films based on the following preferences:
+
+Genre: Action, Comedy, Drama, Sci-Fi, Horror, Romance, Thriller
+Mood: Lighthearted, Intense, Inspirational, Dark, Suspenseful
+Era: Classic, 90s, 2000s, 2010s, or more recent
+Favorite Films/Directors/Actors: Steven Spielberg,Martin Scorsese,Christopher Nolan,Stanley Kubrick,Alfred Hitchcock,Quentin Tarantino,Francis Ford Coppola,Akira Kurosawa,Billy Wilder,Peter Jackson,Robert De Niro,Daniel Day-Lewis,Jack Nicholson,Marlon Brando,Tom Hanks,Leonardo DiCaprio,Al Pacino,Denzel Washington,Anthony Hopkins,Humphrey Bogart
+Type of Experience: Thought-provoking, Visually stunning, Heartwarming, or Action-packed
+Language: English, Bollywood, Telugu
+Please give me a mix of well-known masterpieces and hidden gems!
 """
 
-st.title("Welcome to TeleTek Corporation")
-st.subheader("We sell :blue[Televisions]",  divider=True)
+st.title("Welcome to Movie Recomendations")
+st.subheader(":blue[English, Bollywood, Telugu ]",  divider=True)
 
 if "conversations" not in st.session_state:
     st.session_state.conversations = [{"role" : "system", "content" : prompt}]

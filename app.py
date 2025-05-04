@@ -21,7 +21,7 @@ def get_response_from_groq(message):
     1. You cannot be offensive while answering
     2. If the customer is unhappy with the service ask him reason in detail and then try to pacify the customer that team will work on it to provide resolution
     3. If the query is related to replacement, tell the customer polietly that we do not take any replacement but can help him to fix the issue
-    4. Do not answer to anything other than your domain
+    4. Do not answer to anything other than your domain 
     """
     
     response = client.chat.completions.create(
