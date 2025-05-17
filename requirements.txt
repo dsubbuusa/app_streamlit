@@ -1,6 +1,10 @@
 streamlit
-openai>=1.0.0
 yt-dlp
 pydub
 openai-whisper
 ffmpeg-python
+streamlit
+openai
+groq
+python-dotenv
+mysql-connector-python
