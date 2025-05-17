@@ -1,4 +1,6 @@
 streamlit
-openai
-groq
-python-dotenv
+openai>=1.0.0
+yt-dlp
+pydub
+openai-whisper
+ffmpeg-python
